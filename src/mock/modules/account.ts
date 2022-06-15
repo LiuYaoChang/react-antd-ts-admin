@@ -3,7 +3,7 @@ import { IConfig } from '../interface'
 import { getURLParams } from '@/utils/core'
 
 const loginData = Mock.mock({
-	token: '@lower(@guid)'
+	token: '@lower(@guid)',
 })
 
 const accountInfo = Mock.mock({
@@ -20,29 +20,33 @@ const accountInfo = Mock.mock({
 			id: 1,
 			name: 'dashboard',
 			discriptiong: '首页',
-			reminder: '您没有权限访问首页'
+			reminder: '您没有权限访问首页',
 		},
 		{
 			id: 2,
-			name: 'chart'
+			name: 'chart',
 		},
 		{
 			id: 3,
-			name: 'article'
+			name: 'article',
 		},
 		{
 			id: 4,
-			name: 'blank'
+			name: 'blank',
 		},
 		{
 			id: 5,
-			name: 'form'
+			name: 'form',
 		},
 		{
 			id: 6,
-			name: 'user'
-		}
-	]
+			name: 'user',
+		},
+		{
+			id: 7,
+			name: 'guider',
+		},
+	],
 })
 
 export default {
@@ -57,13 +61,13 @@ export default {
 		}
 		return {
 			code: 200,
-			data: loginData
+			data: loginData,
 		}
 	},
 	logout() {
 		return {
 			code: 200,
-			data: {}
+			data: {},
 		}
 	},
 	getAccountInfo(config: IConfig) {
@@ -77,7 +81,7 @@ export default {
 		}
 		return {
 			code: 200,
-			data: accountInfo
+			data: accountInfo,
 		}
-	}
+	},
 }

@@ -52,7 +52,7 @@ export default class MachineRoom {
 	// 记录纹理的map
 	maps: Map<string, Texture> = new Map()
 	onMouseEnter = (mesh: Mesh) => {}
-	onMouseMove = (x?: number, y?: number) => {}
+	onMouseMove = (x: number, y: number) => {}
 	onMouseLeave = NOOP
 
 	constructor(canvas: HTMLCanvasElement, path: string) {

@@ -5,7 +5,7 @@ import axios from '@/utils/axios'
 import MachineRoom from '@/scene/MachineRoom'
 import PropertyPanelPopper from '@/components/kkb/PropertyPanelPopper'
 // import { IPropertyOption } from '../components/PropertyPanelPopper';
-import { debounce } from 'throttle-debounce'
+// import { debounce } from 'throttle-debounce'
 // import axios from 'axios';
 interface IProperty {
 	name: string
@@ -50,9 +50,9 @@ function MachineRoomPage(props: { width: number; height: number }) {
 			room.loadModel('machineRoom.gltf', () => {
 				room.animate()
 			})
-			const onPointerMove = debounce(10, (ev: PointerEvent) => {
+			const onPointerMove = (ev: PointerEvent) => {
 				room.selectMesh(ev, canvas.current as HTMLCanvasElement)
-			})
+			}
 
 			// 鼠标在机柜上移动
 			room.onMouseMove = (x: number, y: number) => {
